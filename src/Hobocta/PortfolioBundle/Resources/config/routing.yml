@@ -1,0 +1,3 @@
+hobocta_portfolio_homepage:
+    path:     /
+    defaults: { _controller: HoboctaPortfolioBundle:Default:index }
