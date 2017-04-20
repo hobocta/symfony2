@@ -6,4 +6,5 @@ hobocta_portfolio_work:
     path:     /{code}.html
     defaults: { _controller: HoboctaPortfolioBundle:Work:show }
     requirements:
-      code: '[a-z0-9-]+'
+      methods: GET
+      code:    '[a-z0-9-]+'
