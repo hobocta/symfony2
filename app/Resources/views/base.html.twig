@@ -2,12 +2,71 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Портфолио web-программиста Антона Кондратова: разработка сайтов{% endblock %}</title>
+        <link rel="apple-touch-icon" sizes="57x57" href="/markup/favicon/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/markup/favicon/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/markup/favicon/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/markup/favicon/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/markup/favicon/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/markup/favicon/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/markup/favicon/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/markup/favicon/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/markup/favicon/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" href="/markup/favicon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/markup/favicon/android-chrome-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="/markup/favicon/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="/markup/favicon/favicon-16x16.png" sizes="16x16">
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-xWeRKjzyg6bep9D1AsHzUPEWHbWMzlRc84Z0aG+tyms= sha512-mGIRU0bcPaVjr7BceESkC37zD6sEccxE+RJyQABbbKNe83Y68+PyPM5nrE1zvbQZkSHDCJEtnAcodbhlq2/EkQ==" crossorigin="anonymous">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
+
+        <link href="{{ asset('markup/css/style.css') }}" rel="stylesheet">
+        <link href="{{ asset('markup/vendor/tooltipster/css/tooltipster.css') }}" rel="stylesheet">
+        <link href="{{ asset('markup/css/tooltipster-my.css') }}" rel="stylesheet">
+
         {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
-    <body>
-        {% block body %}{% endblock %}
+    <body class="html front logged-in no-sidebars page-node page-node- page-node-16 node-type-page">
+        <div class="wrapper container">
+            <div class="header row">
+                <div class="header__logo col-md-8 col-lg-9">
+                    {% block h1 %}{% endblock %}
+                </div>
+                <div class="header__contacts col-md-4 col-lg-3">
+                    <div class="region region-header">
+                        {% block header_contacts %}{% endblock %}
+                    </div>
+                </div>
+            </div>
+            <div class="content__wrapper row">
+                <div class="content__content col-md-8 col-lg-9">
+                    <div class="region region-content">
+                        {% block content %}
+                        {% endblock %}
+                    </div>
+                </div>
+                <div class="sidebar col-md-4 col-lg-3">
+                    <div class="region region-right">
+                        {% block who %}{% endblock %}
+                        {% block skills %}{% endblock %}
+                        {% block contacts %}{% endblock %}
+                    </div>
+                </div>
+            </div>
+            <div class="footer row">
+                <div class="footer__copyright col-md-8 col-lg-9">
+                    {% block copyright %}{% endblock %}
+                </div>
+                <div class="footer-feed col-md-4 col-lg-3">
+                    {% block feed %}{% endblock %}
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="{{ asset('markup/vendor/tooltipster/js/jquery.tooltipster.min.js') }}"></script>
+        <script src="{{ asset('markup/js/scripts.js') }}"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>

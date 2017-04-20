@@ -1,0 +1,108 @@
+{% extends '::base.html.twig' %}
+
+{% block h1 %}
+    <h1 class="header__title">Портфолио web-программиста Антона Кондратова: разработка сайтов</h1>
+{% endblock %}
+
+{% block header_contacts %}
+    <ul>
+        <li>
+            <a href="http://blog.site-home.ru/" target="_blank" tabindex="-1"><i
+                        class="fa fa-external-link"></i> <span>Блог</span></a>
+        </li>
+        <li>
+            <a href="https://github.com/hobocta" target="_blank" tabindex="-1"><i
+                        class="fa fa-external-link"></i> <span>GitHub</span></a>
+        </li>
+        <li>
+            <a href="https://www.facebook.com/hobocta" target="_blank" tabindex="-1"><i
+                        class="fa fa-external-link"></i> <span>Facebook</span></a>
+        </li>
+    </ul>
+{% endblock %}
+
+{% block who %}
+    <div class="who">
+        <div class="h2">Кто я?</div>
+        <p data-select-like-a-boss="1">Меня зовут Антон Кондратов. Мне 29 лет. Я программист, музыкант. Без
+            вредных привычек. Живу в Волгодонске. 4 года учился в лицее на программиста, 5 лет в ВУЗ-е на
+            рекламиста. Сайтами занимаюсь 10 лет и это продолжает быть мне интересным. Люблю делать свою работу
+            качественно.</p>
+    </div>
+{% endblock %}
+
+{% block skills %}
+    <div class="skills">
+        <div class="h2">Что могу?</div>
+        <ul>
+            <li>php</li>
+            <li>phpstorm</li>
+            <li>sublime text</li>
+            <li>git</li>
+            <li>js/jquery</li>
+            <li>html/css</li>
+            <li>less/stylus</li>
+            <li>gulp</li>
+            <li>bootstrap</li>
+            <li>bitrix</li>
+            <li>drupal</li>
+            <li>netcat</li>
+            <li>umi.cms</li>
+            <li>winscp</li>
+            <li>putty</li>
+            <li>bash</li>
+            <li>python</li>
+            <li>apache</li>
+            <li>nginx</li>
+            <li>centos</li>
+            <li>ubuntu</li>
+            <li>photoshop</li>
+            <li>мегаплан</li>
+            <li>jira</li>
+            <li>youtrack</li>
+            <li>sharex</li>
+            <li>slack</li>
+            <li>skype</li>
+            <li>teamviewer</li>
+            <li>google docs</li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block contacts %}
+    <div class="contacts">
+        <div class="h2">Как со мной связаться?</div>
+        <ul>
+            <li>
+                <a href="skype:askondratov" title="Skype">
+                    <i class="fa fa-skype"></i>
+                    <span>askondratov</span>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:contact@site-home.ru" title="Электронная почта">
+                    <i class="fa fa-envelope-o"></i>
+                    <span>contact@site-home.ru</span>
+                </a>
+            </li>
+            <li>
+                <a href="tel:+79185008020" title="Мобильный телефон">
+                    <i class="fa fa-phone"></i>
+                    <span>+7 918 500-80-20</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block copyright %}
+    <i class="fa fa-copyright"></i>
+    Кондратов А. С., 2009—2017
+{% endblock %}
+
+{% block feed %}
+    <a class="footer-feed__link" href="/rss.xml" title="RSS-поток работ портфолио">
+        <i class="fa fa-rss"></i>
+        <span>RSS-поток</span>
+    </a>
+{% endblock %}

@@ -1,41 +1,307 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Портфолио web-программиста Антона Кондратова: разработка сайтов{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+{% extends '::layout.html.twig' %}
 
-        <link rel="apple-touch-icon" sizes="57x57" href="/markup/favicon/apple-touch-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="/markup/favicon/apple-touch-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="/markup/favicon/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="/markup/favicon/apple-touch-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="/markup/favicon/apple-touch-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="/markup/favicon/apple-touch-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="/markup/favicon/apple-touch-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="/markup/favicon/apple-touch-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="/markup/favicon/apple-touch-icon-180x180.png">
-        <link rel="icon" type="image/png" href="/markup/favicon/favicon-32x32.png" sizes="32x32">
-        <link rel="icon" type="image/png" href="/markup/favicon/android-chrome-192x192.png" sizes="192x192">
-        <link rel="icon" type="image/png" href="/markup/favicon/favicon-96x96.png" sizes="96x96">
-        <link rel="icon" type="image/png" href="/markup/favicon/favicon-16x16.png" sizes="16x16">
-
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-xWeRKjzyg6bep9D1AsHzUPEWHbWMzlRc84Z0aG+tyms= sha512-mGIRU0bcPaVjr7BceESkC37zD6sEccxE+RJyQABbbKNe83Y68+PyPM5nrE1zvbQZkSHDCJEtnAcodbhlq2/EkQ==" crossorigin="anonymous">
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
-
-        <link href="{{ asset('markup/css/style.css') }}" rel="stylesheet">
-        <link href="{{ asset('markup/vendor/tooltipster/css/tooltipster.css') }}" rel="stylesheet">
-        <link href="{{ asset('markup/css/tooltipster-my.css') }}" rel="stylesheet">
-    </head>
-    <body class="html front logged-in no-sidebars page-node page-node- page-node-16 node-type-page">
-        {% block body %}{% endblock %}
-
-        {% include 'HoboctaPortfolioBundle:Default:index.page.html.twig' %}
-
-        {% block javascripts %}{% endblock %}
-
-        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-        <script src="{{ asset('markup/vendor/tooltipster/js/jquery.tooltipster.min.js') }}"></script>
-        <script src="{{ asset('markup/js/scripts.js') }}"></script>
-    </body>
-</html>
+{% block content %}
+    <div class="works__list">
+        <div class="works__item"><a href="/rsvp.html" title="Красивый мультиязычный сайт коммуникационного агентства"
+                                    class="works__link">
+                <div class="works__screenshot">
+                    <picture>
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail_x2/public/chrome_2016-11-17_14-57-43.png"
+                                media="only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (min--moz-device-pixel-ratio: 1.5),
+	only screen and (min-device-pixel-ratio: 1.5)" sizes="191px 143px">
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/chrome_2016-11-17_14-57-43.png"
+                                media="only screen and (-webkit-max-device-pixel-ratio: 1.49),
+	only screen and (max--moz-device-pixel-ratio: 1.49),
+	only screen and (max-device-pixel-ratio: 1.49)">
+                        <img class="works__img"
+                             src="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/chrome_2016-11-17_14-57-43.png"
+                             alt="">
+                    </picture>
+                </div>
+                <div class="works__title">R.S.V.P</div>
+            </a>
+        </div>
+        <div class="works__item"><a href="/shale.html" title="Решение на маркетплейсе 1С-Битрикс." class="works__link">
+                <div class="works__screenshot">
+                    <picture>
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail_x2/public/shale_0.jpg"
+                                media="only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (min--moz-device-pixel-ratio: 1.5),
+	only screen and (min-device-pixel-ratio: 1.5)" sizes="191px 143px">
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/shale_0.jpg"
+                                media="only screen and (-webkit-max-device-pixel-ratio: 1.49),
+	only screen and (max--moz-device-pixel-ratio: 1.49),
+	only screen and (max-device-pixel-ratio: 1.49)">
+                        <img class="works__img"
+                             src="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/shale_0.jpg"
+                             alt="">
+                    </picture>
+                </div>
+                <div class="works__title">Отель «Shale»</div>
+            </a>
+        </div>
+        <div class="works__item"><a href="/china.html" title="Клиника традиционной китайской медицины."
+                                    class="works__link">
+                <div class="works__screenshot">
+                    <picture>
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail_x2/public/china.jpg"
+                                media="only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (min--moz-device-pixel-ratio: 1.5),
+	only screen and (min-device-pixel-ratio: 1.5)" sizes="191px 143px">
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/china.jpg"
+                                media="only screen and (-webkit-max-device-pixel-ratio: 1.49),
+	only screen and (max--moz-device-pixel-ratio: 1.49),
+	only screen and (max-device-pixel-ratio: 1.49)">
+                        <img class="works__img"
+                             src="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/china.jpg"
+                             alt="">
+                    </picture>
+                </div>
+                <div class="works__title">«Природа жизни»</div>
+            </a>
+        </div>
+        <div class="works__item"><a href="/technounity.html" title="Зеленоградский инновационный кластер."
+                                    class="works__link">
+                <div class="works__screenshot">
+                    <picture>
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail_x2/public/technounity_0.jpg"
+                                media="only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (min--moz-device-pixel-ratio: 1.5),
+	only screen and (min-device-pixel-ratio: 1.5)" sizes="191px 143px">
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/technounity_0.jpg"
+                                media="only screen and (-webkit-max-device-pixel-ratio: 1.49),
+	only screen and (max--moz-device-pixel-ratio: 1.49),
+	only screen and (max-device-pixel-ratio: 1.49)">
+                        <img class="works__img"
+                             src="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/technounity_0.jpg"
+                             alt="">
+                    </picture>
+                </div>
+                <div class="works__title">Техно Юнити</div>
+            </a>
+        </div>
+        <div class="works__item"><a href="/kl.html" title="Решение на маркетплейсе 1С-Битрикс." class="works__link">
+                <div class="works__screenshot">
+                    <picture>
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail_x2/public/kl.jpg"
+                                media="only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (min--moz-device-pixel-ratio: 1.5),
+	only screen and (min-device-pixel-ratio: 1.5)" sizes="191px 143px">
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/kl.jpg"
+                                media="only screen and (-webkit-max-device-pixel-ratio: 1.49),
+	only screen and (max--moz-device-pixel-ratio: 1.49),
+	only screen and (max-device-pixel-ratio: 1.49)">
+                        <img class="works__img"
+                             src="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/kl.jpg"
+                             alt="">
+                    </picture>
+                </div>
+                <div class="works__title">Клиника Сити+</div>
+            </a>
+        </div>
+        <div class="works__item"><a href="/mmpl.html" title="Интернет-магазин мебельных комплектующих."
+                                    class="works__link">
+                <div class="works__screenshot">
+                    <picture>
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail_x2/public/2015-02-10_100121.jpg"
+                                media="only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (min--moz-device-pixel-ratio: 1.5),
+	only screen and (min-device-pixel-ratio: 1.5)" sizes="191px 143px">
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/2015-02-10_100121.jpg"
+                                media="only screen and (-webkit-max-device-pixel-ratio: 1.49),
+	only screen and (max--moz-device-pixel-ratio: 1.49),
+	only screen and (max-device-pixel-ratio: 1.49)">
+                        <img class="works__img"
+                             src="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/2015-02-10_100121.jpg"
+                             alt="">
+                    </picture>
+                </div>
+                <div class="works__title">СитиПласт</div>
+            </a>
+        </div>
+        <div class="works__item"><a href="/vira.html" title="Сайт-визитка Саратовской компании «Вира»."
+                                    class="works__link">
+                <div class="works__screenshot">
+                    <picture>
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail_x2/public/vira.jpg"
+                                media="only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (min--moz-device-pixel-ratio: 1.5),
+	only screen and (min-device-pixel-ratio: 1.5)" sizes="191px 143px">
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/vira.jpg"
+                                media="only screen and (-webkit-max-device-pixel-ratio: 1.49),
+	only screen and (max--moz-device-pixel-ratio: 1.49),
+	only screen and (max-device-pixel-ratio: 1.49)">
+                        <img class="works__img"
+                             src="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/vira.jpg"
+                             alt="">
+                    </picture>
+                </div>
+                <div class="works__title">VIRA</div>
+            </a>
+        </div>
+        <div class="works__item"><a href="/clarette.html"
+                                    title="Простой сайт-визитка компании, которая продаёт спонжи в России."
+                                    class="works__link">
+                <div class="works__screenshot">
+                    <picture>
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail_x2/public/clarette_0.jpg"
+                                media="only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (min--moz-device-pixel-ratio: 1.5),
+	only screen and (min-device-pixel-ratio: 1.5)" sizes="191px 143px">
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/clarette_0.jpg"
+                                media="only screen and (-webkit-max-device-pixel-ratio: 1.49),
+	only screen and (max--moz-device-pixel-ratio: 1.49),
+	only screen and (max-device-pixel-ratio: 1.49)">
+                        <img class="works__img"
+                             src="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/clarette_0.jpg"
+                             alt="">
+                    </picture>
+                </div>
+                <div class="works__title">Clarette</div>
+            </a>
+        </div>
+        <div class="works__item"><a href="/ya-trener.html" title="Сайт бизнес-тренера Виталия Гуриновича."
+                                    class="works__link">
+                <div class="works__screenshot">
+                    <picture>
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail_x2/public/ya-trener.jpg"
+                                media="only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (min--moz-device-pixel-ratio: 1.5),
+	only screen and (min-device-pixel-ratio: 1.5)" sizes="191px 143px">
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/ya-trener.jpg"
+                                media="only screen and (-webkit-max-device-pixel-ratio: 1.49),
+	only screen and (max--moz-device-pixel-ratio: 1.49),
+	only screen and (max-device-pixel-ratio: 1.49)">
+                        <img class="works__img"
+                             src="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/ya-trener.jpg"
+                             alt="">
+                    </picture>
+                </div>
+                <div class="works__title">Я – тренер</div>
+            </a>
+        </div>
+        <div class="works__item"><a href="/veld-co.html" title="Большой и пёстрый интернет-магазин."
+                                    class="works__link">
+                <div class="works__screenshot">
+                    <picture>
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail_x2/public/veld.jpg"
+                                media="only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (min--moz-device-pixel-ratio: 1.5),
+	only screen and (min-device-pixel-ratio: 1.5)" sizes="191px 143px">
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/veld.jpg"
+                                media="only screen and (-webkit-max-device-pixel-ratio: 1.49),
+	only screen and (max--moz-device-pixel-ratio: 1.49),
+	only screen and (max-device-pixel-ratio: 1.49)">
+                        <img class="works__img"
+                             src="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/veld.jpg"
+                             alt="">
+                    </picture>
+                </div>
+                <div class="works__title">Veld Co</div>
+            </a>
+        </div>
+        <div class="works__item"><a href="/privodnye-sistemy.html" title="Каталог продукции компании."
+                                    class="works__link">
+                <div class="works__screenshot">
+                    <picture>
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail_x2/public/sites/site-home.ru/files/privod.jpg"
+                                media="only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (min--moz-device-pixel-ratio: 1.5),
+	only screen and (min-device-pixel-ratio: 1.5)" sizes="191px 143px">
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/sites/site-home.ru/files/privod.jpg"
+                                media="only screen and (-webkit-max-device-pixel-ratio: 1.49),
+	only screen and (max--moz-device-pixel-ratio: 1.49),
+	only screen and (max-device-pixel-ratio: 1.49)">
+                        <img class="works__img"
+                             src="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/sites/site-home.ru/files/privod.jpg"
+                             alt="">
+                    </picture>
+                </div>
+                <div class="works__title">Приводные Системы</div>
+            </a>
+        </div>
+        <div class="works__item"><a href="/sultanna-frantsuzova.html" title="Интернет-магазин именитого модельера."
+                                    class="works__link">
+                <div class="works__screenshot">
+                    <picture>
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail_x2/public/sites/site-home.ru/files/sf.jpg"
+                                media="only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (min--moz-device-pixel-ratio: 1.5),
+	only screen and (min-device-pixel-ratio: 1.5)" sizes="191px 143px">
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/sites/site-home.ru/files/sf.jpg"
+                                media="only screen and (-webkit-max-device-pixel-ratio: 1.49),
+	only screen and (max--moz-device-pixel-ratio: 1.49),
+	only screen and (max-device-pixel-ratio: 1.49)">
+                        <img class="works__img"
+                             src="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/sites/site-home.ru/files/sf.jpg"
+                             alt="">
+                    </picture>
+                </div>
+                <div class="works__title">Султанна Французова</div>
+            </a>
+        </div>
+        <div class="works__item"><a href="/trio-rielti.html" title="Сайт Московской риэлторской компании."
+                                    class="works__link">
+                <div class="works__screenshot">
+                    <picture>
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail_x2/public/sites/site-home.ru/files/trio.jpg"
+                                media="only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (min--moz-device-pixel-ratio: 1.5),
+	only screen and (min-device-pixel-ratio: 1.5)" sizes="191px 143px">
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/sites/site-home.ru/files/trio.jpg"
+                                media="only screen and (-webkit-max-device-pixel-ratio: 1.49),
+	only screen and (max--moz-device-pixel-ratio: 1.49),
+	only screen and (max-device-pixel-ratio: 1.49)">
+                        <img class="works__img"
+                             src="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/sites/site-home.ru/files/trio.jpg"
+                             alt="">
+                    </picture>
+                </div>
+                <div class="works__title">Трио-Риэлти</div>
+            </a>
+        </div>
+        <div class="works__item"><a href="/fire.html"
+                                    title="Строгий сайт Волгодонского учебного центра героических пожарных."
+                                    class="works__link">
+                <div class="works__screenshot">
+                    <picture>
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail_x2/public/sites/site-home.ru/files/fire_0.jpg"
+                                media="only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (min--moz-device-pixel-ratio: 1.5),
+	only screen and (min-device-pixel-ratio: 1.5)" sizes="191px 143px">
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/sites/site-home.ru/files/fire_0.jpg"
+                                media="only screen and (-webkit-max-device-pixel-ratio: 1.49),
+	only screen and (max--moz-device-pixel-ratio: 1.49),
+	only screen and (max-device-pixel-ratio: 1.49)">
+                        <img class="works__img"
+                             src="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/sites/site-home.ru/files/fire_0.jpg"
+                             alt="">
+                    </picture>
+                </div>
+                <div class="works__title">Учебный центр пожарных</div>
+            </a>
+        </div>
+        <div class="works__item"><a href="/saturn.html"
+                                    title="Симпатичный сайт-визитка медицинского комплекса с простым и приятным интерфейсом."
+                                    class="works__link">
+                <div class="works__screenshot">
+                    <picture>
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail_x2/public/saturn.jpg"
+                                media="only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (min--moz-device-pixel-ratio: 1.5),
+	only screen and (min-device-pixel-ratio: 1.5)" sizes="191px 143px">
+                        <source srcset="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/saturn.jpg"
+                                media="only screen and (-webkit-max-device-pixel-ratio: 1.49),
+	only screen and (max--moz-device-pixel-ratio: 1.49),
+	only screen and (max-device-pixel-ratio: 1.49)">
+                        <img class="works__img"
+                             src="http://site-home.ru/sites/portfolio/files/styles/thumbnail/public/saturn.jpg"
+                             alt="">
+                    </picture>
+                </div>
+                <div class="works__title">Сатурн</div>
+            </a>
+        </div>
+    </div>
+{% endblock %}
