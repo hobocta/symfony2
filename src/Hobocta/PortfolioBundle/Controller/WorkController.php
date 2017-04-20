@@ -6,8 +6,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class WorkController extends Controller
 {
-    public function indexAction($code)
+    public function showAction($code)
     {
-        return $this->render('HoboctaPortfolioBundle:Work:index.html.twig');
+        return $this->render('HoboctaPortfolioBundle:Work:show.html.twig');
     }
 }
