@@ -43,7 +43,7 @@ class Work
 	protected $link;
 
 	/**
-	 * @ORM\Column(type="string")
+	 * @ORM\Column(type="string", unique=true)
 	 */
 	protected $code;
 
