@@ -65,6 +65,9 @@ swiftmailer:
     password: '%mailer_password%'
     spool: { type: memory }
 
+sonata_admin:
+    title: Портфолио
+
 sonata_block:
     default_contexts: [sonata_page_bundle]
     blocks:
@@ -87,3 +90,8 @@ sonata_block:
         #    templates:
         #       - { name: 'Simple', template: 'AcmeDemoBundle:Block:demo_simple.html.twig' }
         #       - { name: 'Big',    template: 'AcmeDemoBundle:Block:demo_big.html.twig' }
+
+fos_user:
+    db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
+    firewall_name: main
+    user_class: Hobocta\PortfolioBundle\Entity\User
